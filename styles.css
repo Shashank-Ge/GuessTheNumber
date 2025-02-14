@@ -1,5 +1,5 @@
-/* General Styles */
-body {
+ /* General Styles */
+ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     background: linear-gradient(to left, #498ec7, #a261ce); /* Gradient background */
@@ -9,9 +9,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
+   }
+   
+  
+   .container {
     background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white container */
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
@@ -19,38 +20,50 @@ body {
     width: 80%;
     max-width: 600px;
     backdrop-filter: blur(10px); /* Glass effect */
-}
-
-/* Headings */
-h1 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+   }
+   
+  
+   .container:hover {
+    transform: translateY(-5px); /* Jump effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+   }
+   
+  
+   /* Headings */
+   h1 {
     color: #4a69bd; /* Darker blue for heading */
     margin-bottom: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
-}
-
-h2 {
+   }
+   
+  
+   h2 {
     color: #558b2f; /* Darker green for subheading */
-}
-
-/* Input and Button Styles */
-input[type="number"],
-input[type="text"] {
+   }
+   
+  
+   /* Input and Button Styles */
+   input[type="number"],
+   input[type="text"] {
     padding: 14px;
     margin: 10px;
     border-radius: 10px;
     border: 2px solid #c0c6ca; /* Slightly thicker border */
     font-size: 16px;
     transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus {
+   }
+   
+  
+   input[type="text"]:focus,
+   input[type="number"]:focus {
     outline: none;
     border-color: #2980b9; /* Focus border color */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Focus shadow */
-}
-
-button {
+   }
+   
+  
+   button {
     background: linear-gradient(to right, #3498db, #5dade2); /* Gradient button */
     color: white;
     padding: 14px 20px;
@@ -62,34 +75,49 @@ button {
     font-weight: bold;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
+   }
+   
+  
+   button:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-}
-
-button:active {
+   }
+   
+  
+   button:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-button:disabled {
+   }
+   
+  
+   button:disabled {
     background: #95a5a6; /* Gray for disabled buttons */
     cursor: not-allowed;
     box-shadow: none;
-}
-
-/* Message Styles */
-#message {
+   }
+   
+  
+   /* Message Styles */
+   #message {
     margin-top: 25px;
     font-weight: bold;
     color: #e74c3c; /* Red message color */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Message text shadow */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+   }
+   
+  
+   /* Responsive Design */
+   @media (max-width: 768px) {
     .container {
-        width: 90%;
-        padding: 25px;
+    width: 90%;
+    padding: 25px;
+    }
+   
+  
+    input[type="number"],
+    input[type="text"],
+    button {
+    font-size: 15px;
+    padding: 12px;
+    }
+   }
